@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "PureShield Pro - ھەقىقىي قوغدىغۇچى",
+  "version": "2.0.0",
+  "description": "ھەقىقىي ئىلان چەكلەش، مەزمۇن سۈزۈش ۋە تور سۈرئىتىنى ئۆلچەش قىستۇرمىسى.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "declarative_net_request": {
+    "rule_resources": [{
+      "id": "ruleset_1",
+      "enabled": true,
+      "path": "rules.json"
+    }]
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
